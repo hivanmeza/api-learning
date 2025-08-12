@@ -12,6 +12,7 @@ Este repositorio (antes llamado `apis_learning`) guía un proceso incremental pa
 | 2 | Criterios para elegir el stack | [Ir »](docs/02_eleccion_stack.md) |
 | 3 | Template de requisitos (rellenar) | [Ir »](docs/03_template_requisitos.md) |
 | 4 | Dominio ToDo (modelo) | [Ir »](docs/04_domino_todo.md) |
+|   | Ejemplos (índice) | [Ir »](docs/EXAMPLES.md) |
 
 ---
 
