@@ -1,5 +1,9 @@
 # Criterios para elegir el stack del API
 
+> [Inicio](../README.md) · [« Fundamentos](01_fundamentos_apis.md) · **Criterios de elección** · [Template requisitos »](03_template_requisitos.md)
+
+---
+
 ## 1. Dimensiones de evaluación
 
 - Productividad (rapidez para iterar)
@@ -44,4 +48,7 @@
 
 ## 5. Próximo paso
 
-Definirás tus requisitos y construiremos esa matriz. Luego elegiremos el lenguaje para continuar la parte práctica.
+Rellena: [Template de requisitos](03_template_requisitos.md) y generaremos una matriz comparativa (ponderaciones + puntuaciones). Después seleccionaremos el stack para el prototipo.
+
+---
+🔗 Navegación: [« Fundamentos](01_fundamentos_apis.md) · **Criterios de elección** · [Template requisitos »](03_template_requisitos.md) · [Inicio](../README.md)

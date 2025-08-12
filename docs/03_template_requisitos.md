@@ -1,5 +1,9 @@
 # Template de Requisitos del API
 
+> [Inicio](../README.md) · [« Criterios de elección](02_eleccion_stack.md) · **Template requisitos**
+
+Completa y guarda este archivo como `requisitos.md` en la raíz o dentro de `docs/`.
+
 Completa y guarda este archivo como `requisitos.md` en la raíz o dentro de `docs/`.
 
 ## 1. Objetivos de negocio
@@ -84,3 +88,6 @@ Completa y guarda este archivo como `requisitos.md` en la raíz o dentro de `doc
 ---
 
 Completa esto y podremos construir la matriz de decisión del stack.
+
+---
+🔗 Navegación: [Inicio](../README.md) · [Fundamentos](01_fundamentos_apis.md) · [Criterios de elección](02_eleccion_stack.md)

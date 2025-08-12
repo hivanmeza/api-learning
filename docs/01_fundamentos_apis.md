@@ -1,5 +1,9 @@
 # Fundamentos de APIs
 
+> [Inicio](../README.md) · **Fundamentos** · [Siguiente: Criterios de elección »](02_eleccion_stack.md)
+
+---
+
 ## 1. ¿Qué es una API?
 
 Una API (Application Programming Interface) es un contrato que permite que dos sistemas de software se comuniquen mediante reglas claras. En el contexto web, solemos hablar de Web APIs sobre HTTP.
@@ -121,4 +125,7 @@ Depende de organización, ciclo de vida y herramientas CI/CD.
 
 ## 15. Próximo paso
 
-En el siguiente módulo evaluaremos criterios para elegir el lenguaje y framework adecuados (ecosistema, performance, productividad, comunidad, requisitos no funcionales).
+Continúa con: [Criterios para elegir el stack](02_eleccion_stack.md)
+
+---
+🔗 Navegación: [« Inicio](../README.md) · **Fundamentos** · [Criterios de elección »](02_eleccion_stack.md)
