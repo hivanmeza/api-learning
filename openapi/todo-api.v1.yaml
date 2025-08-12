@@ -8,6 +8,8 @@ servers:
     description: Producción (placeholder)
   - url: http://localhost:5000
     description: Local dev
+security:
+  - bearerAuth: []
 paths:
   /v1/projects:
     post:
@@ -27,6 +29,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Project'
         '400': { $ref: '#/components/responses/BadRequest' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
     get:
       summary: Listar proyectos
       operationId: listProjects
@@ -51,6 +54,7 @@ paths:
                   page: { type: integer }
                   pageSize: { type: integer }
                   total: { type: integer }
+  '401': { $ref: '#/components/responses/Unauthorized' }
   /v1/projects/{projectId}/tasks:
     post:
       summary: Crear task
@@ -75,6 +79,7 @@ paths:
                 $ref: '#/components/schemas/Task'
         '400': { $ref: '#/components/responses/BadRequest' }
         '404': { $ref: '#/components/responses/NotFound' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
     get:
       summary: Listar tasks del proyecto
       operationId: listProjectTasks
@@ -129,6 +134,7 @@ paths:
                   pageSize: { type: integer }
                   total: { type: integer }
         '404': { $ref: '#/components/responses/NotFound' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
   /v1/tasks/{taskId}:
     get:
       summary: Obtener task
@@ -146,6 +152,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Task'
         '404': { $ref: '#/components/responses/NotFound' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
     patch:
       summary: Actualizar parcialmente task
       operationId: updateTask
@@ -164,6 +171,7 @@ paths:
         '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Task' } } } }
         '400': { $ref: '#/components/responses/BadRequest' }
         '404': { $ref: '#/components/responses/NotFound' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
   /v1/tasks/{taskId}/complete:
     post:
       summary: Marcar task como completada
@@ -176,6 +184,7 @@ paths:
       responses:
         '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Task' } } } }
         '404': { $ref: '#/components/responses/NotFound' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
   /v1/tasks/{taskId}/audit:
     get:
       summary: Historial de cambios de la task
@@ -224,6 +233,7 @@ paths:
                   items:
                     type: array
                     items: { $ref: '#/components/schemas/Tag' }
+  '401': { $ref: '#/components/responses/Unauthorized' }
 components:
   responses:
     BadRequest:
@@ -236,6 +246,17 @@ components:
       content:
         application/json:
           schema: { $ref: '#/components/schemas/Error' }
+    Unauthorized:
+      description: No autenticado o token inválido
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  description: "JWT Bearer. Usar header 'Authorization: Bearer <token>'"
   schemas:
     Project:
       type: object
